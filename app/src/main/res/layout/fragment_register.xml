@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/login_background"
+    tools:context=".UILogin.RegisterFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="ServiceJob"
+                android:textColor="@color/white"
+                android:textSize="50dp"/>
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="350dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                app:srcCompat="@drawable/logoimprovisado"/>
+
+            <EditText
+                android:id="@+id/et_CorreoRegistro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:layout_margin="10dp"
+                android:textColorHint="@color/Gris"
+                android:hint="Ingrese un correo aqui" />
+
+            <EditText
+                android:id="@+id/et_ContraseñaRegistro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:layout_margin="10dp"
+                android:textColorHint="@color/Gris"
+                android:hint="Ingrese un contraseña aqui"/>
+
+            <EditText
+                android:id="@+id/et_NombreUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:layout_margin="10dp"
+                android:textColorHint="@color/Gris"
+                android:hint="Ingrese su nombre completo"/>
+
+            <EditText
+                android:id="@+id/et_EdadUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Edad"
+                android:layout_margin="10dp"
+                android:inputType="number"
+                android:textColorHint="@color/Gris"/>
+
+            <EditText
+                android:id="@+id/et_DireccionUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:layout_margin="10dp"
+                android:textColorHint="@color/Gris"
+                android:hint="Ingresa tu direccion"/>
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/Spinner_Estados"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="72dp"
+                android:layout_marginEnd="72dp"
+                android:gravity="center"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/black"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_RegistroUsuario"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Registrar"
+                app:cornerRadius="20dp"
+                android:backgroundTint="@color/AzulClaro"/>
+
+                </LinearLayout>
+            </ScrollView>
+</FrameLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1030179332625",
+    "project_id": "servicejob-fb691",
+    "storage_bucket": "servicejob-fb691.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1030179332625:android:0486554766b0f50abf07b0",
+        "android_client_info": {
+          "package_name": "com.example.servicejob"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1030179332625-tpslv7deg2qehatfvc77jh4raiig2sag.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAi0p490AZSOs9vnOOWWbzRBGw5v5VI3kE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1030179332625-tpslv7deg2qehatfvc77jh4raiig2sag.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
