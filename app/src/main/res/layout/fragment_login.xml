@@ -1,106 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:gravity="center"
-    android:layout_gravity="center_horizontal"
-    android:layout_height="match_parent"
-    android:background="@drawable/login_background"
-    tools:context=".UILogin.LoginFragment">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <LinearLayout
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="10dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/login_background"
         android:gravity="center"
-        android:orientation="vertical">
+        tools:context=".UILogin.UI.LoginFragment">
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
             android:gravity="center"
-            android:text="ServiceJob"
-            android:textColor="@color/white"
-            android:textSize="50dp"/>
+            android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="350dp"
-            android:layout_height="150dp"
-            android:layout_gravity="center"
-            android:layout_marginBottom="20dp"
-            app:srcCompat="@drawable/logoimprovisado"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textColor="@color/white"
+                android:textSize="50sp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Inicio de sesión"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:textColor="@color/white"
-            android:layout_margin="10dp"/>
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="350dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                app:srcCompat="@drawable/logoimprovisado" />
 
-        <EditText
-            android:id="@+id/Et_CorreoLogin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:layout_margin="10dp"
-            android:textColorHint="@color/Gris"
-            android:hint="Ingrese su correo aqui" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/inicio_de_sesi_n"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/Et_ContraseñaLogin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPassword"
-            android:layout_margin="10dp"
-            android:textColorHint="@color/Gris"
-            android:hint="Ingrese su contraseña aqui"/>
+            <EditText
+                android:id="@+id/Et_CorreoLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:ems="10"
+                android:hint="@string/ingrese_su_correo_aqui"
+                android:inputType="textPersonName"
+                android:textColorHint="@color/Gris" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_IniciodeSesion"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:text="Iniciar sesion"
-            app:cornerRadius="20dp"
-            android:backgroundTint="@color/AzulClaro"/>
+            <EditText
+                android:id="@+id/Et_ContraseñaLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:ems="10"
+                android:hint="@string/ingrese_su_contrase_a_aqui"
+                android:inputType="textPassword"
+                android:textColorHint="@color/Gris" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_IniciarConFacebook"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:text="Continuar con facebook"
-            app:cornerRadius="20dp"
-            android:backgroundTint="@color/AzulFB"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_IniciodeSesion"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/AzulClaro"
+                android:text="@string/iniciar_sesion"
+                app:cornerRadius="20dp" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_IniciarConGoogle"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:text="Continuar con google"
-            app:cornerRadius="20dp"
-            android:textColor="@color/black"
-            android:backgroundTint="@color/white"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_IniciarConFacebook"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/AzulFB"
+                android:text="@string/continuar_con_facebook"
+                app:cornerRadius="20dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:textColor="@color/white"
-            android:textSize="20dp"
-            android:text="¿No tienes una cuenta?"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_IniciarConGoogle"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:text="@string/continuar_con_google"
+                android:textColor="@color/black"
+                app:cornerRadius="20dp" />
 
-        <Button
-            android:id="@+id/btn_irRegistro"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Registrate"
-            android:backgroundTint="@color/black"/>
-    </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/no_tienes_una_cuenta"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
-</androidx.appcompat.widget.LinearLayoutCompat>
+            <Button
+                android:id="@+id/btn_irRegistro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:text="@string/registrate" />
+        </LinearLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>
