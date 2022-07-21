@@ -1,5 +1,6 @@
-package com.example.servicejob.UILogin.UI
+package com.example.servicejob.ui.login
 
+import android.content.ContentValues.TAG
 import android.os.Bundle
 import android.util.Log
 import android.util.Patterns
@@ -9,10 +10,12 @@ import android.widget.Toast
 import androidx.appcompat.widget.AppCompatSpinner
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.example.servicejob.Data.model.usersData
 import com.example.servicejob.R
-import com.example.servicejob.UILogin.Data.usersData
 import com.example.servicejob.databinding.FragmentRegisterBinding
+import com.google.firebase.auth.ActionCodeSettings
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.actionCodeSettings
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
@@ -92,8 +95,7 @@ class RegisterFragment : Fragment(R.layout.fragment_register) {
         val direccion = _binding.etDireccionUsuario.text.toString()
         val email = _binding.etCorreoRegistro.text.toString()
         val password = _binding.etContraseARegistro.text.toString()
-        registerDataUsers( name, userName, email, edad, direccion, password)
-        //Crear usuario
+        registerDataUsers(name, userName, email, edad, direccion, password)
 
     }
 
@@ -103,57 +105,70 @@ class RegisterFragment : Fragment(R.layout.fragment_register) {
         email: String,
         edad: Int,
         direccion: String,
-        password:String
+        password: String
         //estado: String
     ) {
         var userRef = db.collection("usersData").document(username)
-                userRef.get().addOnCompleteListener { task->
-                    if (task.isSuccessful){
-                        val document = task.result
-                        if (document != null){
-                            if( document.exists()){
-                                Toast.makeText(requireContext(), getString(R.string.message_user_exist), Toast.LENGTH_SHORT).show()
-                            }else{
-                                userRef.set(usersData(name, username, email, edad, direccion)).addOnCompleteListener {
-                                    auth.createUserWithEmailAndPassword(
-                                        email, password
-                                    ).addOnCompleteListener(requireActivity()) { task ->
-                                        if (task.isSuccessful) {
-                                            //val user = Firebase.auth.currentUser
-                                            //Enviar correo de verificacion
-                                            findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
-                                            Toast.makeText(requireContext(), getString(R.string.user_created), Toast.LENGTH_SHORT).show()
-                                            //user!!.sendEmailVerification().addOnCompleteListener() { task ->
-                                            //if (task.isSuccessful) {
-                                        }else{
-                                            Toast.makeText(
-                                                requireContext(), getString(R.string.message_failed_register),
-                                                Toast.LENGTH_SHORT
-                                            ).show()
-                                        }
-                                        //} else {
-                                        Toast.makeText(
-                                            requireContext(), getString(R.string.message_failed_register),
-                                            Toast.LENGTH_SHORT
-                                        ).show()
-
-                                        //}
+        userRef.get().addOnCompleteListener { task ->
+            if (task.isSuccessful) {
+                val document = task.result
+                if (document != null) {
+                    if (document.exists()) {
+                        Toast.makeText(
+                            requireContext(),
+                            getString(R.string.message_user_exist),
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    } else {
+                        userRef.set(usersData(name, username, email, edad, direccion))
+                            .addOnCompleteListener {
+                                auth.createUserWithEmailAndPassword(
+                                    email, password
+                                ).addOnCompleteListener(requireActivity()) { task ->
+                                    if (task.isSuccessful) {
+                                        //Enviar correo de verificacion
+                                                if (task.isSuccessful) {
+                                                    findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
+                                                    Toast.makeText(
+                                                        requireContext(),
+                                                        getString(R.string.user_created),
+                                                        Toast.LENGTH_SHORT
+                                                    ).show()
+                                                } else {
+                                                    Toast.makeText(
+                                                        requireContext(),
+                                                        getString(R.string.message_failed_register),
+                                                        Toast.LENGTH_SHORT
+                                                    ).show()
+                                                }
                                     }
-                                }.addOnFailureListener { error ->
-                                    Log.d("failded", error.toString())
                                 }
+                            }.addOnFailureListener { error ->
+                                Log.d("failded", error.toString())
                             }
-                        }
                     }
                 }
+            }
+        }
 
 
     }
 
-    private fun sendEmailVerification(){
-        val user = auth.currentUser!!
-        user.sendEmailVerification().addOnCompleteListener {
+    private fun buildActionCodeSettings() {
+        val actionCodeSettings = actionCodeSettings {
+            url = "\"https://www.example.com/finishSignUp?cartId=1234"
+            handleCodeInApp = true
+            setIOSBundleId("com.example.ios")
+            setAndroidPackageName("com.example.servicejob", true, "12")
+        }
 
+    }
+
+    private fun sendSignInLink(email: String, actionCodeSettings: ActionCodeSettings){
+        Firebase.auth.sendSignInLinkToEmail(email,actionCodeSettings).addOnCompleteListener { task ->
+            if (task.isSuccessful){
+                Log.d(TAG,"email sent")
+            }
         }
     }
 }

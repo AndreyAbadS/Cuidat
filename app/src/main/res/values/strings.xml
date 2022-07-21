@@ -41,6 +41,28 @@
     <string name="user_created">Usuario creado</string>
     <string name="message_email_valid">Introduce un correo electronico valido</string>
     <string name="message_user_exist">Nombre de usuario ya existe</string>
+    <string name="service">Servicios</string>
+    <string name="profile">Perfil</string>
+    <string name="carpinteria">Carpinteria</string>
+    <string name="plomeria">Plomeria</string>
+    <string name="belleza">Belleza</string>
+    <string name="limpieza">Limpieza</string>
+    <string name="message_singin">Inicia sesión</string>
+    <string name="servicios_digitales">Servicios digitales</string>
+    <string name="electrodomesticos">Electrodomesticos</string>
+    <string name="aires_acondicionados">Aire acondicionado</string>
+    <string name="computo">Computo</string>
+    <string name="electricidad">Electricidad</string>
+    <string name="construcci_n">Construcción</string>
+    <string name="azulejo">Azulejo</string>
+    <string name="jardineria">Jardineria</string>
+    <string name="cocina">Cocina</string>
+    <string name="muebles">Muebles</string>
+    <string name="pintura">Pintura</string>
+    <string name="hogar">Hogar</string>
+    <string name="piscina">Piscina</string>
+    <string name="mudanza">Mudanza</string>
+    <string name="agregar">Agregar</string>
 
 
     <string-array name="Estados_Array">

@@ -7,7 +7,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/login_background"
-        tools:context=".UILogin.UI.RegisterFragment">
+        tools:context=".ui.login.RegisterFragment">
 
         <ScrollView
             android:layout_width="match_parent"

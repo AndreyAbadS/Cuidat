@@ -9,7 +9,7 @@
         android:layout_gravity="center_horizontal"
         android:background="@drawable/login_background"
         android:gravity="center"
-        tools:context=".UILogin.UI.LoginFragment">
+        tools:context=".ui.login.LoginFragment">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -71,7 +71,7 @@
                 android:text="@string/iniciar_sesion"
                 app:cornerRadius="20dp" />
 
-            <com.google.android.material.button.MaterialButton
+           <!-- <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_IniciarConFacebook"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
@@ -86,7 +86,7 @@
                 android:backgroundTint="@color/white"
                 android:text="@string/continuar_con_google"
                 android:textColor="@color/black"
-                app:cornerRadius="20dp" />
+                app:cornerRadius="20dp" /> -->
 
             <TextView
                 android:layout_width="wrap_content"
@@ -99,9 +99,10 @@
 
             <Button
                 android:id="@+id/btn_irRegistro"
+                android:textColor="@color/black"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/black"
+                android:backgroundTint="@color/Gris"
                 android:text="@string/registrate" />
         </LinearLayout>
 

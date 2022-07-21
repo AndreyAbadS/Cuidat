@@ -1,15 +1,14 @@
-package com.example.servicejob.UILogin.UI
+package com.example.servicejob.ui.login
 
-import CuerpoApp.Cuerpo_Activity
 import android.content.Intent
 import android.os.Bundle
 import android.util.Patterns
 import android.view.View
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.servicejob.R
 import com.example.servicejob.databinding.FragmentLoginBinding
+import com.example.servicejob.ui.home.HomeActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
@@ -73,23 +72,19 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
     //Verifica el email, y accede a la aplicacion
     private fun updateUI(currentUser: FirebaseUser?) {
         if (currentUser != null) {
-            val intent = Intent(activity, Cuerpo_Activity::class.java)
+            val intent = Intent(requireContext(), HomeActivity::class.java)
             activity?.startActivity(intent)
             activity?.finish()
-            //if (currentUser.isEmailVerified) {
+          //  if (currentUser.isEmailVerified) {
 
             //} else {
-               // Toast.makeText(requireContext(), getString(R.string.message_verify_email), Toast.LENGTH_SHORT)
-                  //  .show()
-           // }
-        } else {
-            Toast.makeText(requireContext(), getString(R.string.autentication_failed), Toast.LENGTH_SHORT)
-                .show()
+              //  Toast.makeText(requireContext(), getString(R.string.message_verify_email), Toast.LENGTH_SHORT)
+                //   .show()
+            //}
+        //} else {
+          //  Toast.makeText(requireContext(), getString(R.string.autentication_failed), Toast.LENGTH_SHORT)
+            //    .show()
         }
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-
-    }
 }

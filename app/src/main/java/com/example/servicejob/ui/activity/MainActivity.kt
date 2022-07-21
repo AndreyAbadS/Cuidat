@@ -1,7 +1,7 @@
-package com.example.servicejob.UILogin
+package com.example.servicejob.ui.activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.example.servicejob.R
 
 class MainActivity : AppCompatActivity() {

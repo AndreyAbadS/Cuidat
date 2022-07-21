@@ -1,10 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--Colores del login-->
     <color name="InicioLogin">#4E50E3</color>
     <color name="FInalLogin">#494970</color>
     <color name="AzulFB">#162BD8</color>
     <color name="AzulClaro">#4670D8</color>
     <color name="Gris">#9FC8C7C7</color>
+    <!--Colores de los servicios-->
+    <color name="electrodomesticosColor">#C68F3E</color>
+    <color name="construccionColor">#C68B34</color>
+    <color name="mudanzaColor">#837663</color>
+    <color name="cocinaColor">#ED683E</color>
+    <color name="pinturaColor">#5F8E89</color>
+    <color name="hogarColor">#D571A8</color>
+    <color name="albercaColor">#439DC6</color>
+    <color name="mueblesColor">#8C5F1B</color>
+    <color name="azulejoColor">#5AB6DF</color>
+    <color name="jardineriaColor">#91D148</color>
+    <color name="aire_acondicionado">#96DCE4</color>
+    <color name="serviciosDigitalesColor">#2875D1</color>
+    <color name="electricidadColor">#D5C432</color>
+    <color name="computoColor">#7C77FA</color>
+    <color name="bellezaColor">#D15D85</color>
+    <color name="limpiezaColor">#3FC7D8</color>
+    <color name="carpinteroColor">#FAAC3A</color>}
+    <color name="plomeriaColor">#6A6D83</color>
+
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>

@@ -1,4 +1,4 @@
-package com.example.servicejob.UILogin.Data
+package com.example.servicejob.Data.model
 
 data class usersData(
     var name: String,
