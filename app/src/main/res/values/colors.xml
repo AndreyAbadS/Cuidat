@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--Colores del login-->
-    <color name="InicioLogin">#4E50E3</color>
+    <color name="InicioLogin">#8688F4</color>
     <color name="FInalLogin">#494970</color>
     <color name="AzulFB">#162BD8</color>
     <color name="AzulClaro">#4670D8</color>
-    <color name="Gris">#9FC8C7C7</color>
+    <color name="Gris">#9F434343</color>
+    <color name="rojo">#CF2020</color>
     <!--Colores de los servicios-->
     <color name="electrodomesticosColor">#C68F3E</color>
     <color name="construccionColor">#C68B34</color>
